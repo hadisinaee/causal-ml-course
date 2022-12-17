@@ -1,21 +1,31 @@
-# Requirements
-- You need to have `python3` and virtual environment module to run this.
-- R libraries required by [Causal Discovery Toolbox][cdt]
+# causal-ml-course
 
-# Available Data
-There are two `tar.gz` files in this repository. These are the results of our synthetic runs on data. 
-1- ./results_20perc_n15.tar.gz : all the results for the sparse experiment where we have 15 nodes and 5 trials
-2- ./results_70perc_n15.tar.gz : all the results for the dense experiment where we have 15 nodes and 5 trials
+This repository contains code and data for experimentation with causal machine learning techniques. It includes synthetic and real-world datasets as well as code for running experiments.
 
-# Steps To Install and Use the Runs
+## Prerequisites
+
+To use this repository, you will need:
+- Python 3
+- The virtual environment module for Python
+- R libraries as required by the [Causal Discovery Toolbox][cdt]
+
+## Available Data
+
+There are two `tar.gz` files in this repository:
+1. `results_20perc_n15.tar.gz`: This file contains the results of a sparse experiment with 15 nodes and 5 trials.
+2. `results_70perc_n15.tar.gz`: This file contains the results of a dense experiment with 15 nodes and 5 trials.
+
+## Installation and Usage
+
+To set up the necessary packages and environment, follow these steps:
+
+1. Create a virtual environment: 
 ```bash
 python3 -m venv venv
-pip install -r requirements.txt 
+pip install -r requirements.txt
 ```
 
-# Graph Partitioning Data 
+## Graph Partitioning Data
 
-There is a file name `partitioning_data.py` which includes the code for running our test on the graph partitioning case. This file loads the all required data that is inside graph_partitioning.csv file. To run this experiment, simply run `python3 partitioning_data.py`.
+The file partitioning_data.py contains code for running experiments on graph partitioning data. This file loads the required data from the `fennel_output.csv` file. To run this experiment, simply run: `python3 ./partitioning_data.py`
 
-
-[cdt]: https://fentechsolutions.github.io/CausalDiscoveryToolbox/html/index.html
